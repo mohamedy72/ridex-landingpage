@@ -2,12 +2,87 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>Ridex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <!-- 
+      - #Header
+     -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <div class="overlay active" data-overlay></div>
+        <a href="#" class="logo">
+          <img src="./images/logo.svg" alt="Ridex Logo" />
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li><a href="#home" class="navbar-link" data-nav-link>Home</a></li>
+            <li>
+              <a href="#explore" class="navbar-link" data-nav-link
+                >Explore cars
+              </a>
+            </li>
+            <li>
+              <a href="#about" class="navbar-link" data-nav-link>About us </a>
+            </li>
+            <li>
+              <a href="#account" class="navbar-link" data-nav-link>Account</a>
+            </li>
+            <li><a href="#blog" class="navbar-link" data-nav-link>Blog</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <div class="header-contact">
+            <a href="tel:88002345678" class="contact-link">8 800 234 56 78 </a>
+            <span class="contact-time">Mon - Sat: 9:00 am - 6:00 pm </span>
+          </div>
+
+          <a href="#featured-car" class="btn" aria-labelledby="aria-label-txt">
+            <ion-icon name="car-outline"></ion-icon>
+
+            <span id="aria-label-txt"> Explore Cars </span>
+          </a>
+
+          <a href="#" class="btn user-btn" aria-label="Prfile">
+            <ion-icon name="person-outline"></ion-icon>
+          </a>
+
+          <button
+            class="nav-toggle-btn"
+            data-nav-toggle-btn
+            aria-label="Toggle Menu"
+          >
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- 
+      - JS & Packages Link
+     -->
+    <script type="module" src="/src/app.ts"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
